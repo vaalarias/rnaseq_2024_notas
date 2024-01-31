@@ -54,3 +54,10 @@ sce_layer
 ## Revisemos el tamaño de este objeto
 lobstr::obj_size(sce_layer)
 iSEE::iSEE(sce_layer)
+# Se descargo scatterplot
+
+## Notas para recount3
+usethis::use_r("_recount3")
+
+## ShinyApp
+usethis::use_r("app")
