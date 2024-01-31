@@ -1,0 +1,13 @@
+name: SRP009615
+title: SRP009615
+username: vaalarias
+account: vaalarias
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 11091424
+bundleId:
+url: https://vaalarias.shinyapps.io/SRP009615/
+version: 1
+asMultiple: FALSE
+asStatic: FALSE
+ignoredFiles: _recount3.R|01-notas.R|02-visualizar-mtcars.R|03_summerizedxp.R|summexp.R
