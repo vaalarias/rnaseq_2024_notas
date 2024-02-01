@@ -10,4 +10,4 @@ url: https://vaalarias.shinyapps.io/SRP009615/
 version: 1
 asMultiple: FALSE
 asStatic: FALSE
-ignoredFiles: _recount3.R|01-notas.R|02-visualizar-mtcars.R|03-intro-Bioconductor.R|03_summerizedxp.R|04_SummarizedExperiment.R|05_recount3.R|summexp.R
+ignoredFiles: 01-notas.R|02-visualizar-mtcars.R|03-intro-Bioconductor.R|03_summerizedxp.R|04_SummarizedExperiment.R|05_recount3.R
