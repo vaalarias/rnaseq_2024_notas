@@ -20,3 +20,7 @@ usethis::use_r("05_recount3.R")
 
 ## app shiny
 usethis::use_r("app.R")
+
+## Notas sobre ExploreModelMatrix
+usethis::use_r("06_ExploremODELMatrix.R")
+
