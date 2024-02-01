@@ -1,9 +1,14 @@
-## Para hacer shiny app interactiva
+## Para hacer
+## https://libd.shinyapps.io/SRP009615/
+
+## Primero necesitamos configurar RStudio con
+## shinyapps.io. Para eso necesitaremos:
+# install.packages("rsconnect")
 
 ## También necesitamos verificar que tengamos todos
 ## los paquetes en versiones nuevas. Eso
-## lo podemos hacer con
-BiocManager::valid()
+## lo podemos hacer con:
+# BiocManager::valid()
 
 ## Después necesitamos copiar y pegar la información
 ## de nuestra cuenta (numéro y token de acceso)
@@ -12,6 +17,11 @@ BiocManager::valid()
 options(repos = BiocManager::repositories())
 
 library("recount3")
+
+
+## URL de recount3
+# options(recount3_url = "https://recount-opendata.s3.amazonaws.com/recount3/release")
+
 ## ----'quick_example'--------------------------------
 ## Revisemos todos los proyectos con datos de humano en recount3
 # human_projects <- available_projects()
@@ -49,4 +59,3 @@ rse_gene_SRP009615 <- expand_sra_attributes(rse_gene_SRP009615)
 
 ## Crear el sitio web interactivo
 iSEE::iSEE(rse_gene_SRP009615)
-
