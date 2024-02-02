@@ -17,7 +17,7 @@
 options(repos = BiocManager::repositories())
 
 library("recount3")
-
+library("iSEE")
 
 ## URL de recount3
 # options(recount3_url = "https://recount-opendata.s3.amazonaws.com/recount3/release")
@@ -44,18 +44,23 @@ proj_info <- structure(list(
 ## Crea un objeto de tipo RangedSummarizedExperiment (RSE)
 ## con la información a nivel de genes
 rse_gene_SRP009615 <- create_rse(proj_info)
+message(Sys.time(), " ya tenemos el RSE")
 
 ## ----"tranform_counts"------------------------------
 ## Convirtamos las cuentas por nucleotido a cuentas por lectura
 ## usando compute_read_counts().
 ## Para otras transformaciones como RPKM y TPM, revisa transform_counts().
 assay(rse_gene_SRP009615, "counts") <- compute_read_counts(rse_gene_SRP009615)
+message(Sys.time(), " ya tenemos counts")
 
+assays(rse_gene_SRP009615)$raw_counts <- NULL
+message(Sys.time(), " ya borramos los raw_counts")
 
 ## ----"expand_attributes"----------------------------
 ## Para este estudio en específico, hagamos más fácil de usar la
 ## información del experimento
 rse_gene_SRP009615 <- expand_sra_attributes(rse_gene_SRP009615)
+message(Sys.time(), " ya expandimos los SRA attributes")
 
 ## Crear el sitio web interactivo
 iSEE::iSEE(rse_gene_SRP009615)
